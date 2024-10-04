@@ -1,10 +1,10 @@
 # Hangman Game Features Checklist
 
 ## Core Features
-- [ ] **Word Selection**: Randomly select a word from a predefined word list.
-- [ ] **Letter Guessing**: Players can input a letter to guess the word.
-- [ ] **Tries**: The player has 6 incorrect guess attempts.
-- [ ] **Game Replay**: Prompt the player to play again after each round.
+- [x] **Word Selection**: Randomly select a word from a predefined word list.
+- [x] **Letter Guessing**: Players can input a letter to guess the word.
+- [x] **Tries**: The player has 6 incorrect guess attempts.
+- [x] **Game Replay**: Prompt the player to play again after each round.
 
 ## Future Release Features
 
