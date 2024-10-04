@@ -19,3 +19,6 @@ def is_valid_guess(guess, guessed_letters):
         return False
 
     return True
+
+def is_playing():
+    input("Would you like to play again (y/n)?: ").lower()

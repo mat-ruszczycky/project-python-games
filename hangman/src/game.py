@@ -32,7 +32,8 @@ def play_hangman():
 
             if all(letter in guessed_letters for letter in word):
                 print(f"\nCongratulations! You guessed the word: '{word}'")
+                isPlaying = is_playing()
                 break
         else:
             print(f"\nSorry, you've run out of tries. The word was: '{word}'")
-            isPlaying = input("Would you like to play again (y/n)?: ").lower()
+            isPlaying = is_playing()
