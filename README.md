@@ -18,3 +18,21 @@ Simple python command-line games for fun and experimentation
 ```bash
     python main.py
 ```
+
+## Games Released
+1. [Hangman](https://github.com/mat-ruszczycky/project-python-games/tree/main/hangman)
+
+## Games Planned
+- Tic-Tac-Toe
+- Blackjack
+- Snake Game
+- Number Guessing Game
+- Rock-Paper-Scissors
+- Memory Game
+- Minesweeper
+- Connect Four
+- Battleship
+- Word Search
+- Text-Based Adventure Game
+- Quiz Game
+- Card Games (like War)
