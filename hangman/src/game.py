@@ -1,7 +1,7 @@
 import random
 
-from .wordlist import WORDS
-from .display import *
+from src.wordlist import WORDS
+from src.display import *
 
 def play_hangman():
     isPlaying = 'y'
@@ -15,9 +15,7 @@ def play_hangman():
         print("Guess the word!")
     
         while tries > 0:
-            print("\nWord: ", display_word(word, guessed_letters))
-            print(f"Tries left: {tries}")
-            print(f"Guessed letters: {', '.join(sorted(guessed_letters)) if guessed_letters else 'None'}")
+            displayStatus(word, guessed_letters, tries)
 
             guess = input("Guess a letter: ").lower()
 
