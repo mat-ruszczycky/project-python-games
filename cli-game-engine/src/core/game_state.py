@@ -9,7 +9,7 @@ class GameState:
         return cls._instance
 
     def __init__(self) -> None:
-        if not hasattr(self, '_initialized'):
+        if not hasattr(self, "_initialized"):
             self.isPlaying = False
             self._initialized = True  # Prevents re-initialization
 
