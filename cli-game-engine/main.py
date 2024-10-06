@@ -1,4 +1,10 @@
-# from src.FILE import MODULE
+# CLI Game Engine
+
+from src.core.game_engine import GameEngine
+
+def gameLoop() -> None:
+    print('Playing Game Title')
 
 if __name__ == "__main__":
-    print('Start here')
+    engine = GameEngine
+    engine().play(gameLoop)
