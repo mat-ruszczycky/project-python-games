@@ -6,7 +6,7 @@ from src.io.output_handler import OutputHandler
 
 def gameLoop(state: GameState) -> None:
     outputHandler = OutputHandler()
-    outputHandler.display_message('Playing Game Title')
+    outputHandler.displayMessage('Playing Game Title')
 
 if __name__ == "__main__":
     gameState = GameState()

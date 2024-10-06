@@ -4,8 +4,8 @@ class GameState:
     def __init__(self) -> None:
         self.isPlaying = False
 
-    def start_game(self) -> None:
+    def startGame(self) -> None:
         self.isPlaying = True
 
-    def stop_game(self) -> None:
+    def stopGame(self) -> None:
         self.isPlaying = False

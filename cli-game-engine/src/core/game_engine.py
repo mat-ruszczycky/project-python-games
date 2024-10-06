@@ -23,23 +23,23 @@ class GameEngine:
         return value.lower() == 'y'
     
     def stop(self) -> None:
-        self.state.stop_game()
-        self.output_handler.display_message("Game is stopped.")
+        self.state.stopGame()
+        self.output_handler.displayMessage("Game is stopped.")
 
     def play(self, gameLoop: callable) -> None:
-        self.state.start_game()
-        self.output_handler.display_message("Game is starting...")
+        self.state.startGame()
+        self.output_handler.displayMessage("Game is starting...")
 
         while self.state.isPlaying:
             gameLoop(self.state)
 
-            userInput = self.input_handler.get_user_input('Continue playing? (y/n): ')
+            userInput = self.input_handler.getUserInput('Continue playing? (y/n): ')
 
             while userInput not in ['y', 'n']:
-                self.output_handler.display_message("Invalid input. Please enter 'y' to continue or 'n' to stop.")
-                userInput = self.input_handler.get_user_input('Continue playing? (y/n): ')
+                self.output_handler.displayMessage("Invalid input. Please enter 'y' to continue or 'n' to stop.")
+                userInput = self.input_handler.getUserInput('Continue playing? (y/n): ')
 
             if not self.shouldContinue(userInput):
-                self.state.stop_game()
+                self.state.stopGame()
         
         self.stop()

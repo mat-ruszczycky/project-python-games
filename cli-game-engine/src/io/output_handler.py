@@ -2,5 +2,5 @@
 
 class OutputHandler:
 
-    def display_message(self, message: str) -> None:
+    def displayMessage(self, message: str) -> None:
         print(message)
