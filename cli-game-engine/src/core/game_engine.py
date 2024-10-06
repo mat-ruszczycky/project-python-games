@@ -7,6 +7,7 @@ from src.core.game_state import GameState
 from src.io.input_handler_interface import InputHandlerInterface
 from src.io.output_handler_interface import OutputHandlerInterface
 
+# Comment this
 class GameEngine:
     _instance = None
 

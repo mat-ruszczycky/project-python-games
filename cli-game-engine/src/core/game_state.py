@@ -1,5 +1,6 @@
 # CLI Game Engine
 
+# Comment this
 class GameState:
     _instance = None
 
