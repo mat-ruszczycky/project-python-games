@@ -31,7 +31,7 @@ class GameEngine:
         self.output_handler.display_message("Game is starting...")
 
         while self.state.isPlaying:
-            gameLoop()
+            gameLoop(self.state)
 
             userInput = self.input_handler.get_user_input('Continue playing? (y/n): ')
 
