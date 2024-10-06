@@ -13,12 +13,20 @@ from src.io.input_handler import InputHandler
 
 # Define some scene logic functions
 def introSceneLogic():
-    print("This is the intro scene.")
-    print("Welcome to the game!")
+    outputHandler.displayMessage("This is the intro scene.")
+    outputHandler.displayMessage("Welcome to the game!")
+
+def optionsSceneLogic():
+    outputHandler.displayMessage("This is the options scene.")
+    outputHandler.displayMessage("Welcome to the options - choose your destiny")
+
+def mainSceneLogic():
+    outputHandler.displayMessage("This is the main scene.")
+    outputHandler.displayMessage("Welcome to the main - PLAY!")
 
 def gameOverSceneLogic():
-    print("This is the game over scene.")
-    print("Game over. You lost!")
+    outputHandler.displayMessage("This is the game over scene.")
+    outputHandler.displayMessage("Game over. You lost!")
 
 # Comment this
 def gameLoop(
@@ -32,15 +40,21 @@ def gameLoop(
     introScene = GameScene("Intro", introSceneLogic)
     gameManager.addScene(introScene)
 
+    opitonsScene = GameScene("Options", optionsSceneLogic)
+    gameManager.addScene(opitonsScene)
+
+    mainScene = GameScene("Main", mainSceneLogic)
+    gameManager.addScene(mainScene)
+
     gameOverScene = GameScene("Game Over", gameOverSceneLogic)
     gameManager.addScene(gameOverScene)
 
     # Link the scenes
-    introScene.setNextScene(gameOverScene)
+    introScene.setNextScene(mainScene)
+    mainScene.setNextScene(gameOverScene)
     gameOverScene.setPreviousScene(introScene)
 
-    # Start the game and transition through scenes
-    outputHandler.displayMessage(f"Game is running, isPlaying: {state.isPlaying}")
+    # Init
     currentScene = introScene
     currentScene.run()
 
@@ -49,5 +63,7 @@ if __name__ == "__main__":
     gameState = GameState()
     inputHandler = InputHandler()
     outputHandler = OutputHandler()
+
+    # Comment this
     engine = GameEngine(gameState, inputHandler, outputHandler)
     engine.play(lambda state: gameLoop(state, inputHandler, outputHandler))
