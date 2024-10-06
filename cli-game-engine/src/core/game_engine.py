@@ -12,11 +12,11 @@ class GameEngine:
             cls._instance = super(GameEngine, cls).__new__(cls)
         return cls._instance
 
-    def __init__(self, state: GameState, inputHandler: InputHandler, outputHandler: OutputHandler) -> None:
+    def __init__(self, state: GameState) -> None:
         if not hasattr(self, '_initialized'):
             self.state = state
-            self.input_handler = inputHandler
-            self.output_handler = outputHandler
+            self.input_handler = InputHandler()
+            self.output_handler = OutputHandler()
             self._initialized = True
 
     def shouldContinue(self, value: str) -> bool:
