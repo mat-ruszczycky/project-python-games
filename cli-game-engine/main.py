@@ -35,9 +35,9 @@ def gameLoop(
     gameOverScene = GameScene("Game Over", gameOverSceneLogic)
     gameManager.addScene(gameOverScene)
 
-    # Link the scenes (you can also do this dynamically)
-    introScene.set_next_scene(gameOverScene)
-    gameOverScene.set_previous_scene(introScene)
+    # Link the scenes
+    introScene.setNextScene(gameOverScene)
+    gameOverScene.setPreviousScene(introScene)
 
     # Start the game and transition through scenes
     outputHandler.displayMessage(f"Game is running, isPlaying: {state.isPlaying}")

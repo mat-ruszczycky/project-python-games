@@ -23,20 +23,20 @@ class GameScene:
         print(f"Running scene: {self.name}")
         self.scene_logic()  # Execute the core logic for this scene
 
-    def set_previous_scene(self, scene: Optional['GameScene']) -> None:
+    def setPreviousScene(self, scene: Optional['GameScene']) -> None:
         self.previous_scene = scene
 
-    def set_next_scene(self, scene: Optional['GameScene']) -> None:
+    def setNextScene(self, scene: Optional['GameScene']) -> None:
         self.next_scene = scene
 
-    def go_to_next_scene(self) -> Optional['GameScene']:
+    def gotoNextScene(self) -> Optional['GameScene']:
         if self.next_scene:
             print(f"Transitioning from {self.name} to {self.next_scene.name}")
         else:
             print(f"{self.name} has no next scene.")
         return self.next_scene
 
-    def go_to_previous_scene(self) -> Optional['GameScene']:
+    def gotoPreviousScene(self) -> Optional['GameScene']:
         if self.previous_scene:
             print(f"Transitioning from {self.name} to {self.previous_scene.name}")
         else:
